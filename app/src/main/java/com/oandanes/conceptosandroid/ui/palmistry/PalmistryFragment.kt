@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.oandanes.conceptosandroid.databinding.FragmentPalmistryBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class PalmistryFragment : Fragment() {
     private var _binding: FragmentPalmistryBinding? = null
     private val binding get() = _binding!!
@@ -14,7 +16,7 @@ class PalmistryFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentPalmistryBinding.inflate(layoutInflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
